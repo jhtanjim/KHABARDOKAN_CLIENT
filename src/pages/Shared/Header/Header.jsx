@@ -25,33 +25,29 @@ const Header = () => {
   const navLinkStyles = ({ isActive }) => {
     return {
       fontWeight: isActive ? 'bold' : 'normal',
-      textDecoration: 'none' ,
-      color: isActive ? 'black' : 'white',
+      textDecoration: 'none',
+      color: isActive ? 'white' : 'lightBlue',
     }
   }
-  
+
 
   return (
     <Navbar
-      className="mb-3"
+      className=""
       collapseOnSelect
       expand="lg"
-      bg="secondary"
+      bg="dark"
       variant="secondary"
     >
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <img
-              style={{ width: "100px", height: "60px" }}
-              src="Pic De jekono"
-              alt=""
-            />
+            <h2 className="text-light">KhabarDokan</h2>
           </Nav>
 
           <Nav className="mx-auto d-flex align-items-center gap-5">
-            <NavLink style={navLinkStyles} 
+            <NavLink style={navLinkStyles}
               to="/"
             >
               Home
@@ -64,7 +60,7 @@ const Header = () => {
           </Nav>
 
           <Nav>
-           
+
             {user && (
               <OverlayTrigger
                 placement="bottom"
@@ -83,7 +79,7 @@ const Header = () => {
               <Button
                 onClick={handleLogOut}
                 className="bg-warning text-dark fw-bold border  "
-                
+
               >
                 Logout
               </Button>
@@ -91,7 +87,7 @@ const Header = () => {
               <Link to="/login">
                 <Button
                   className="bg-warning text-dark fw-bold border  "
-                 
+
                 >
                   Login
                 </Button>

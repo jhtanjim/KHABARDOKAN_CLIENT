@@ -4,41 +4,34 @@ import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 const Footer = () => {
   return (
 
-    <footer className="mt-5 bg-secondary">
-    <div className="container py-4 ">
-      <div className="row">
-        <div className="col-md-4 text-white">
-          <h4  className="fs-5 fst-italic">
-          vdvdxfvsdfvdsfdsfdsf
-          </h4>
-          <p className="">
-          Gtself on its warm and inviting atmosphere, where guests can enjoy an unforgettable dining experience with family and friends.
-          </p>
+    <footer class="bg-dark text-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>Email: info@chiefhunter.com</li>
+              <li>Phone: +1-555-123-4567</li>
+              <li>Address: 123 Main St, Anytown USA</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li><a href="#"><i class="bi bi-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
         </div>
-        <div className="col-md-4 text-white">
-          <h5 className="mb-3">Contact Us</h5>
-          <p>343 Main St</p>
-          <p>Downtown, Italiano 12345</p>
-          <p>Phone: (555) 555-5555</p>
-          <p>Email: ano@.com</p>
-        </div>
-        <div className="col-md-4 text-right text-white">
-          <p className="fs-5">Follow Us</p>
-          <p>Join us on social networks</p>
-          <a href="#" className="fs-4 text-white fa-lg mx-3">
-            {" "}
-            <BsFacebook />
-          </a>
-          <a href="#" className="fs-4 text-white fa-lg mx-3">
-            <BsInstagram />
-          </a>
-          <a href="#" className="fs-4 text-white fa-lg mx-3">
-            <BsTwitter />
-          </a>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <p>&copy; 2023 ChiefHunter. All rights reserved.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+
 
   );
 };

@@ -19,6 +19,7 @@ const ChefCard = () => {
   return (
     <div>
       <div className="container mt-5">
+        <h1 className="text-center">Our Cheif</h1>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
           {chefs.map((chef) => (
             <div className="col" key={chef.id}>

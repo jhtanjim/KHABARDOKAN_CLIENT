@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 const Banner = () => {
   return (
@@ -7,42 +7,29 @@ const Banner = () => {
     <Carousel fade>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="../../../../public/220921081550-05-chinese-foods-mapo-tofu.jpg"
+          className="d-block w-100 h-70 "
+          src="../../../../public/7fe63194-245b-452c-b755-852613ab1b0e.jpeg"
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG06p0omZl0x4J5wTBGitvOSAg7RDRos6yiklwiGUE&s"
+          className="d-block w-100 h-70 " src="../../../../public/download.jpg"
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg"
+          className="d-block w-100 h-70 "
+          src="../../../../public/download (1).jpg"
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+
+
+      </Carousel.Item >
+    </Carousel >
 
   );
 };

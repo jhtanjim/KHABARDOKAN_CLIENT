@@ -4,43 +4,44 @@ import { PDFDownloadLink, Document, Page, Text } from "@react-pdf/renderer";
 
 const MyDoc = () => (
   <Document>
-    <Page>
-      <Text className="m-5">
-        1)Tell us the differences between uncontrolled and controlled
-        components. Ans: Controlled Component:-- i)The component is under control
-        of the component’s state. ii)These components are predictable as are
-        controlled by the state of the component. iii)It accepts the current
-        value as props Uncontrolled Component:-- i)Components are under the
-        control of DOM. ii)Are Uncontrolled because during the life cycle
-        methods the data may loss iii)We access the values using refs. 2)How to
-        validate React props using PropTypes Ans:Props are used to passing the
-        read-only attributes to React components. For the proper functioning of
-        components and to avoid future bugs and glitches it is necessary that
-        props are passed correctly.The propTypes object contains a list of
-        validators for basic data types, some of them are: PropTypes.any : This
-        means the prop can be of any data type. PropTypes.bool: This means the
-        prop should be a boolean. PropTypes.number: This means the prop should
-        be a number. PropTypes.string: This means the prop should be a string.
-        PropTypes.func: This means the prop should be a function.
-        PropTypes.array: This means the prop should be an array.
-        PropTypes.object: This means the prop should be an object.
-        PropTypes.symbol: This means the prop should be a symbol.
-        PropTypes.instanceOf: This means the prop should be an instance of a
-        particular JavaScript class. PropTypes.isRequired: This means the prop
-        should be provided. PropTypes.oneOf(): This means the props should be
-        one of several types of specified values. PropTypes.element: This means
-        the props must be an element. 3)Tell us the difference between nodejs
-        and express js. Ans: NodeJs:-- i) It is used to build server-side,
-        input-output, event-driven apps. ii)It is built on Google’s V8 engine.
-        iii)Controllers are not provided. ExpressJs:-- i)It is used to build
-        web-apps using approaches and principles of Node.js. ii)It is built on
-        Node.js. iii) Controllers are provided. 4)What is a custom hook, and why
-        will you create a custom hook? Ans:Hooks are reusable functions.When a
-        component logic that needs to be used by multiple components, we can
-        extract that logic to a custom Hook. Custom Hooks start with "use".
-        Example: UseFetch
-      </Text>
-    </Page>
+    <div className="container">
+
+      <h4 className='text-center my-5'>Blog Section</h4>
+
+      <div className="row ">
+        <div className="col-12 col-md-6 my-5">
+          <Accordion defaultActiveKey="0">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>When should you use context API?</Accordion.Header>
+              <Accordion.Body>
+                We should use context API when we need to pass data or state down to multiple levels of components in our React application, but don't want to pass it through props at every level. Context provides a way to share data between components without having to pass the data down manually at every level. It can be particularly useful for theming, internationalization, or user authentication data.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>What is a custom hook?</Accordion.Header>
+              <Accordion.Body>
+                A custom hook is a function that uses React's built-in hooks (like useState, useEffect, and useContext) to create some reusable logic that can be shared across different components in your React application. By using custom hooks, you can extract common logic from components and avoid duplicating code. Custom hooks should always start with the word "use" and can take in arguments to customize their behavior.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>What is useRef?</Accordion.Header>
+              <Accordion.Body>
+                useRef is a hook that returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component, and can be used to store any mutable value, similar to an instance property on a class component. It's commonly used to access or modify DOM elements, store a previous value to compare with the current value in a useEffect, or to hold a reference to a setInterval or setTimeout function.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>What is useMemo?</Accordion.Header>
+              <Accordion.Body>
+                useMemo is a hook that allows you to memoize the result of a function so that it's only recomputed when one of the dependencies changes. It takes two arguments: a function and an array of dependencies. The function is only re-executed if one of the dependencies has changed since the last time it was called. useMemo can be used to optimize expensive calculations or to prevent unnecessary re-renders of components.
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
+        <div className="col-12 col-md-6 my-5 ">
+          <img className='img-fluid border rounded' src="https://i.ibb.co/CwwdnHc/React-Router-A-Beginners-Guide-to-Essential-Navigation-Techniques.png" alt="" />
+        </div>
+      </div>
+    </div>
   </Document>
 );
 
@@ -48,9 +49,9 @@ const DownloadButton = () => (
   <PDFDownloadLink document={<MyDoc />} fileName="myBlog.pdf">
     {({ blob, url, loading, error }) =>
       loading ? "Loading document..." : <div className=" mt-5">
-     <Button className="bg-success">Download now!</Button>
-    </div>
-     
+        <Button className="bg-success">Download now!</Button>
+      </div>
+
     }
   </PDFDownloadLink>
 );
@@ -68,18 +69,18 @@ const Blogs = () => {
       <div className="container">
 
         <div class="container">
-  <h3 class="text-center mb-4">Tell us the differences between uncontrolled and controlled components?</h3>
+          <h3 class="text-center mb-4">Tell us the differences between uncontrolled and controlled components?</h3>
 
-  <h3 class="text-center mb-4">How to validate React props using PropTypes?</h3>
+          <h3 class="text-center mb-4">How to validate React props using PropTypes?</h3>
 
-  <h3 class="text-center mb-4">Tell us the difference between nodejs and express js?</h3>
+          <h3 class="text-center mb-4">Tell us the difference between nodejs and express js?</h3>
 
-  <h3 class="text-center mb-4">What is a custom hook, and why will you create a custom hook?</h3>
+          <h3 class="text-center mb-4">What is a custom hook, and why will you create a custom hook?</h3>
 
-</div>
+        </div>
 
       </div>
-      </div>
+    </div>
 
 
 
