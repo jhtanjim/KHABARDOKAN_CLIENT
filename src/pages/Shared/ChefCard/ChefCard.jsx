@@ -23,7 +23,7 @@ const ChefCard = () => {
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
           {chefs.map((chef) => (
             <div className="col" key={chef.id}>
-              <Card>
+              <Card className="mt-3">
                 <LazyLoad>
                   <Card.Img
                     style={{ height: "311px", width: "414px" }}
@@ -33,7 +33,7 @@ const ChefCard = () => {
                     src={chef.image}
                   />
                 </LazyLoad>
-                <Card.Body>
+                <Card.Body className="bg-light" style={{ border: '1px solid #ddd', boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)' }}>
                   <Card.Title>{chef.name}</Card.Title>
                   <Card.Text>
                     <strong>Experience:</strong> {chef.experience} years
@@ -44,7 +44,7 @@ const ChefCard = () => {
                   </Card.Text>
                   <Button
                     onClick={() => navigate(`ChefRecipes/${chef.id}`)}
-                    className="bg-warning border border-0"
+                    className="bg-danger border border-0"
                   >
                     View Recipes
                   </Button>

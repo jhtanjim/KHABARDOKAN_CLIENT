@@ -4,44 +4,9 @@ import { PDFDownloadLink, Document, Page, Text } from "@react-pdf/renderer";
 
 const MyDoc = () => (
   <Document>
-    <div className="container">
+    <Page>
 
-      <h4 className='text-center my-5'>Blog Section</h4>
-
-      <div className="row ">
-        <div className="col-12 col-md-6 my-5">
-          <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>When should you use context API?</Accordion.Header>
-              <Accordion.Body>
-                We should use context API when we need to pass data or state down to multiple levels of components in our React application, but don't want to pass it through props at every level. Context provides a way to share data between components without having to pass the data down manually at every level. It can be particularly useful for theming, internationalization, or user authentication data.
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>What is a custom hook?</Accordion.Header>
-              <Accordion.Body>
-                A custom hook is a function that uses React's built-in hooks (like useState, useEffect, and useContext) to create some reusable logic that can be shared across different components in your React application. By using custom hooks, you can extract common logic from components and avoid duplicating code. Custom hooks should always start with the word "use" and can take in arguments to customize their behavior.
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>What is useRef?</Accordion.Header>
-              <Accordion.Body>
-                useRef is a hook that returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component, and can be used to store any mutable value, similar to an instance property on a class component. It's commonly used to access or modify DOM elements, store a previous value to compare with the current value in a useEffect, or to hold a reference to a setInterval or setTimeout function.
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="3">
-              <Accordion.Header>What is useMemo?</Accordion.Header>
-              <Accordion.Body>
-                useMemo is a hook that allows you to memoize the result of a function so that it's only recomputed when one of the dependencies changes. It takes two arguments: a function and an array of dependencies. The function is only re-executed if one of the dependencies has changed since the last time it was called. useMemo can be used to optimize expensive calculations or to prevent unnecessary re-renders of components.
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </div>
-        <div className="col-12 col-md-6 my-5 ">
-          <img className='img-fluid border rounded' src="https://i.ibb.co/CwwdnHc/React-Router-A-Beginners-Guide-to-Essential-Navigation-Techniques.png" alt="" />
-        </div>
-      </div>
-    </div>
+    </Page>
   </Document>
 );
 
@@ -61,24 +26,58 @@ const Blogs = () => {
   return (
 
     <div>
-
-      <div className="App">
-        <DownloadButton />
-      </div>
-
       <div className="container">
 
-        <div class="container">
-          <h3 class="text-center mb-4">Tell us the differences between uncontrolled and controlled components?</h3>
+        <h4 className='text-center my-5'>Blog Section</h4>
 
-          <h3 class="text-center mb-4">How to validate React props using PropTypes?</h3>
+        <div className="row ">
+          <div className="col-12 col-md-6 my-5">
+            <Accordion defaultActiveKey="0">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Differences between uncontrolled and controlled components:
 
-          <h3 class="text-center mb-4">Tell us the difference between nodejs and express js?</h3>
+                </Accordion.Header>
+                <Accordion.Body>
+                  Uncontrolled components store their own state internally, while controlled components are managed by React state.                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>Validating React props using PropTypes:
 
-          <h3 class="text-center mb-4">What is a custom hook, and why will you create a custom hook?</h3>
+                </Accordion.Header>
+                <Accordion.Body>
+                  PropTypes is a built-in library in React that allows you to validate the type and shape of your component props.
 
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="2">
+                <Accordion.Header>Differences between Node.js and Express.js:
+
+                </Accordion.Header>
+                <Accordion.Body>
+                  Node.js is a runtime environment for executing JavaScript code outside of a web browser, while Express.js is a web application framework that runs on top of Node.js.
+
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="3">
+                <Accordion.Header>WWhat is a custom hook, and why will you create a custom hook?
+
+                  ?</Accordion.Header>
+                <Accordion.Body>
+                  A custom hook is a JavaScript function that allows you to reuse stateful logic in functional components. You would create a custom hook to avoid duplicating code and make your code more modular and reusable.
+
+
+
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+          <div className="col-12 col-md-6 my-5 ">
+            <img className='img-fluid border rounded' src="https://res.cloudinary.com/practicaldev/image/fetch/s--cOsaUTh6--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q7hogmi9grhxs1k1881i.jpg" alt="" />
+          </div>
         </div>
-
+      </div>
+      <div className="App text-center mb-2">
+        <DownloadButton />
       </div>
     </div>
 
