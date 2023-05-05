@@ -32,7 +32,7 @@ const ChefRecipes = () => {
   };
 
   return (
-    <div className="mb-5 mt-5">
+    <div className="mb-5 mt-5 chef-info-container">
       {isLoading ? (
         <div className="d-flex justify-content-center my-5">
           <div className="spinner-border text-success" role="status">
@@ -42,19 +42,20 @@ const ChefRecipes = () => {
       ) : (
         <div className="container mt-5">
           <div className="row md:py-5 d-flex align-items-center">
-            <div className="col-12 col-md-6  sm-12 ,md:mt-5 ">
-              <h2 className=" fs-2 fst-italic">{chefData?.name}</h2>
-              <p className="fw-light">{chefData?.bio}</p>
-              <p className="fw-light">Likes:{chefData?.likes}</p>
-              <p className="fw-light">
-                Number of Recipes: {chefData?.recipesList.length}
-              </p>
-              <p className="fw-light">
-                Years of Experience: {chefData?.experience}
-              </p>
-            </div>
+            <div className="col-12 col-md-12 sm-12 ms-6 chef-image">
+              <div className="col-12 col-md-12 sm-12 md:mt-5 chef-info">
+                <h2 className="fs-2 c">{chefData?.name}</h2>
+                <p className="">{chefData?.bio}</p>
+                <p className="">Likes:{chefData?.likes}</p>
+                <p className="">
+                  Number of Recipes: {chefData?.recipesList.length}
+                </p>
+                <p className="">
+                  Years of Experience: {chefData?.experience}
+                </p>
+              </div>
 
-            <div className="col-12 col-md-6 sm-12 ms-6">
+
               <LazyLoad offsetVertical={500} debounce={false}>
                 <img
                   className="img-fluid w-75 rounded-2"
@@ -66,16 +67,16 @@ const ChefRecipes = () => {
             </div>
           </div>
 
-          <div>
-            <h3 className="mt-5 fst-italic">Popular Recipes</h3>
+          <div className="popular-recipes ">
+            <h2 className="mt-5 ">Popular Recipes</h2>
             <hr className="w-25 fw-bold text-warning" />
             <hr className="w-50 fw-bold text-warning" />
-            <Row xs={1} md={2} lg={3} className="g-4 ">
+            <Row xs={1} md={2} lg={1} className="g-4 ">
               {chefData?.recipesList.slice(0, 3).map((recipe) => (
                 <Col key={recipe.name}>
                   <Card>
                     <Card.Body>
-                      <Card.Title>{recipe.name}</Card.Title>
+                      <Card.Title> {recipe.name}</Card.Title>
                       <Card.Text>
                         <p className="fw-bold">Ingredients:</p>
                         <ul>
@@ -90,25 +91,21 @@ const ChefRecipes = () => {
                           <p>{recipe.cookingMethod}</p>
                         </div>
 
-                        <div className=" d-flex align-items-center gap-2">
-                          <span> Ratings
-                          </span>
-
+                        <div className="d-flex align-items-center gap-2">
+                          <span> Ratings </span>
                           {recipe.rating}
-
                         </div>
-
                       </Card.Text>
 
                       <Button
-                        className="bg-warning border border-0"
+                        className="bg-success border border-0"
                         onClick={() => handleFavoriteClick(recipe.name)}
                         disabled={favorites.includes(recipe.name)}
                       >
                         {favorites.includes(recipe.name)
                           ? "Favorite"
                           : "Add to Favorites"}
-                      </Button>
+                        <FaStar className="ms-2" />                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -126,11 +123,11 @@ const ChefRecipes = () => {
               draggable
               pauseOnHover
             />
-
           </div>
         </div>
-      )}{" "}
+      )}
     </div>
+
   );
 };
 
