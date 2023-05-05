@@ -25,11 +25,11 @@ const NavigationBar = () => {
   const navLinkStyles = ({ isActive }) => {
     return {
       fontWeight: isActive ? 'bold' : 'normal',
-      textDecoration: 'none' ,
+      textDecoration: 'none',
       color: isActive ? 'red' : 'black',
     }
   }
-  
+
 
   return (
     <Navbar
@@ -51,7 +51,7 @@ const NavigationBar = () => {
           </Nav>
 
           <Nav className="mx-auto d-flex align-items-center gap-5">
-            <NavLink style={navLinkStyles} 
+            <NavLink style={navLinkStyles}
               to="/"
             >
               Home
@@ -64,7 +64,7 @@ const NavigationBar = () => {
           </Nav>
 
           <Nav>
-           
+
             {user && (
               <OverlayTrigger
                 placement="bottom"
