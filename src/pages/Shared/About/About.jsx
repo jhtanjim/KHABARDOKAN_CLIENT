@@ -9,7 +9,7 @@ const About = () => {
             <Row>
                 <Col xs={12} md={6}>
                     <Image className='rounded-2 border-1'
-                        src="../../../../public/abo.avif"
+                        src="https://cdn.pixabay.com/photo/2017/02/25/15/21/pork-barbecue-2098004_960_720.jpg"
                         alt="Example"
                         fluid
                     />

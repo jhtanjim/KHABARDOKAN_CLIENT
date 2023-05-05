@@ -11,7 +11,7 @@ const ChefCard = () => {
 
   useEffect(() => {
     // Fetch chefs data from API and set it to state
-    fetch("http://localhost:5000/data")
+    fetch("https://10-assignment-server-jhtanjim.vercel.app/data")
       .then((response) => response.json())
       .then((data) => setChefs(data));
   }, []);

@@ -6,6 +6,28 @@ const MyDoc = () => (
   <Document>
     <Page>
 
+      <Text>
+        1/ Differences between uncontrolled and controlled components:
+
+        Answer: Uncontrolled components store their own state internally, while controlled components are managed by React state.
+
+
+        2/Validating React props using PropTypes:
+
+        Answer: PropTypes is a built-in library in React that allows you to validate the type and shape of your component props.
+
+        3/Differences between Node.js and Express.js:
+
+        Node.js is a runtime environment for executing JavaScript code outside of a web browser, while Express.js is a web application framework that runs on top of Node.js.
+
+
+
+        4/WWhat is a custom hook, and why will you create a custom hook?
+
+        Answer:  A custom hook is a JavaScript function that allows you to reuse stateful logic in functional components. You would create a custom hook to avoid duplicating code and make your code more modular and reusable.
+
+
+      </Text>
     </Page>
   </Document>
 );

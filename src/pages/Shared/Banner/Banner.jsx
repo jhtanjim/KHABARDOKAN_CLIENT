@@ -8,13 +8,13 @@ const Banner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 h-70 "
-          src="../../../../public/7fe63194-245b-452c-b755-852613ab1b0e.jpeg"
+          src="https://cdn.pixabay.com/photo/2015/08/21/06/34/chinese-food-898499_960_720.jpg"
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-70 " src="../../../../public/chinese-food-gd6d7892dc_1920.jpg"
+          className="d-block w-100 h-70 " src="https://cdn.pixabay.com/photo/2017/10/16/09/01/sushi-2856547_960_720.jpg"
           alt="Second slide"
         />
 
@@ -22,7 +22,7 @@ const Banner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 h-70 "
-          src="../../../../public/spring-rolls-gab7ed60cf_1920.jpg"
+          src="https://cdn.pixabay.com/photo/2017/08/10/08/39/snow-crab-2620060_960_720.jpg"
           alt="Third slide"
         />
 
