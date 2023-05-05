@@ -1,34 +1,48 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 const Banner = () => {
   return (
 
-      <div className="mb-5 mt-5">
-        <div className="container mt-5">
-          <div className="row md:py-5 d-flex align-items-center">
-            <div className="col-12 col-md-6  sm-12 ,md:mt-5 ">
-                
-              <div>
+    <Carousel fade>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="../../../../public/220921081550-05-chinese-foods-mapo-tofu.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG06p0omZl0x4J5wTBGitvOSAg7RDRos6yiklwiGUE&s"
+          alt="Second slide"
+        />
 
-                <h2 className="text-center fs-2 fst-italic">Title DE</h2>
-              </div>
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg"
+          alt="Third slide"
+        />
 
-              <p className="fw-light">
-              ch dish is made with fresh ingredients and a touch of amore. Join us on a culinary journey through Italy and let Chef [insert name] be your guide
-              </p>
-
-            </div>
-            <div className="col-12 col-md-6 sm-12 ms-6">
-              <img
-                className="img-fluid"
-                src="https://www.shutterstock.com/image-photo/chef-cook-preparing-vegetables-his-260nw-1188599263.jpg"
-                loading="lazy"  alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
 
   );
 };

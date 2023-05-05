@@ -16,7 +16,7 @@ const ChefRecipes = () => {
   const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cuisine")
+    fetch("http://localhost:5000/data")
       .then((response) => response.json())
       .then((data) => {
         const chef = data.find((job) => job.id === ChefId);
@@ -67,67 +67,67 @@ const ChefRecipes = () => {
           </div>
 
           <div>
-          <h3 className="mt-5 fst-italic">Popular Recipes</h3>
-          <hr className="w-25 fw-bold text-warning" />
-          <hr className="w-50 fw-bold text-warning" />   
-          <Row xs={1} md={2} lg={3} className="g-4 ">
-            {chefData?.recipesList.slice(0, 3).map((recipe) => (
-              <Col key={recipe.name}>
-                <Card>
-                  <Card.Body>
-                    <Card.Title>{recipe.name}</Card.Title>
-                    <Card.Text>
-                      <p className="fw-bold">Ingredients:</p>
-                      <ul>
-                        {recipe.ingredients
-                          .slice(0, 5)
-                          .map((ingredient, index) => (
-                            <li key={index}>{ingredient}</li>
-                          ))}
-                      </ul>
-                      <div>
-                        <p className="fw-bold">Cooking Method:</p>
-                        <p>{recipe.cookingMethod}</p>
-                      </div>
+            <h3 className="mt-5 fst-italic">Popular Recipes</h3>
+            <hr className="w-25 fw-bold text-warning" />
+            <hr className="w-50 fw-bold text-warning" />
+            <Row xs={1} md={2} lg={3} className="g-4 ">
+              {chefData?.recipesList.slice(0, 3).map((recipe) => (
+                <Col key={recipe.name}>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title>{recipe.name}</Card.Title>
+                      <Card.Text>
+                        <p className="fw-bold">Ingredients:</p>
+                        <ul>
+                          {recipe.ingredients
+                            .slice(0, 5)
+                            .map((ingredient, index) => (
+                              <li key={index}>{ingredient}</li>
+                            ))}
+                        </ul>
+                        <div>
+                          <p className="fw-bold">Cooking Method:</p>
+                          <p>{recipe.cookingMethod}</p>
+                        </div>
 
-                      <div className=" d-flex align-items-center gap-2">
-                        <span> Ratings
+                        <div className=" d-flex align-items-center gap-2">
+                          <span> Ratings
                           </span>
 
-                           {recipe.rating}
-                          
-                      </div>
+                          {recipe.rating}
 
-                    </Card.Text>
+                        </div>
 
-                    <Button
-                      className="bg-warning border border-0"
-                      onClick={() => handleFavoriteClick(recipe.name)}
-                      disabled={favorites.includes(recipe.name)}
-                    >
-                      {favorites.includes(recipe.name)
-                        ? "Favorite"
-                        : "Add to Favorites"}
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
+                      </Card.Text>
 
-          <ToastContainer
-            position="top-right"
-            autoClose={3000}
-            hideProgressBar
-            newestOnTop
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+                      <Button
+                        className="bg-warning border border-0"
+                        onClick={() => handleFavoriteClick(recipe.name)}
+                        disabled={favorites.includes(recipe.name)}
+                      >
+                        {favorites.includes(recipe.name)
+                          ? "Favorite"
+                          : "Add to Favorites"}
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
 
-</div>
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
+
+          </div>
         </div>
       )}{" "}
     </div>

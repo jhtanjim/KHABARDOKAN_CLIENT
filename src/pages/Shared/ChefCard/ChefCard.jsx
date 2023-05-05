@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
-import {  } from "react-icons/bs";
+import { } from "react-icons/bs";
 
 const ChefCard = () => {
   const [chefs, setChefs] = useState([]);
@@ -11,7 +11,7 @@ const ChefCard = () => {
 
   useEffect(() => {
     // Fetch chefs data from API and set it to state
-    fetch("http://localhost:5000/cuisine")
+    fetch("http://localhost:5000/data")
       .then((response) => response.json())
       .then((data) => setChefs(data));
   }, []);
